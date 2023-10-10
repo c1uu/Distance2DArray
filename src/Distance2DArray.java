@@ -8,13 +8,13 @@ public class Distance2DArray {
     // city_names is array of strings
 
 
-    private static final String [] CITY_NAMES =
+    private static final String[] CITY_NAMES =
             {"Atlanta", "Boston", "Chicago", "Houston",
                     "Los Angeles", "New York", "San Francisco",
                     "Washington"};
 
     //distance is 8x8 2d array
-    private static final int [] [] DISTANCES =
+    private static final int[][] DISTANCES =
             {       {0,1110,710,790,2190,850,2480,620},
                     {1110,0,1000,1830,3020,210,3130,450},
                     {710,1000,0,1090,2050,810,2170,710},
@@ -24,14 +24,13 @@ public class Distance2DArray {
                     {2480, 3130, 2170, 1910, 390, 2930, 0, 2840},
                     {620, 450, 710, 1370, 2650, 240, 2840, 0}};
 
-    public static void main(String [] args){
+    public static void main(String[] args) {
         //display initial message, including a list of legal cities
         System.out.println(
-                """
-                        This program finds the distance between two cities.
-                        Supported cities: Atlanta, Boston, Chicago, Houston,
-                        Los Angeles, New York, San Francisco, Washington.
-                        """);
+                "This program finds the distance between two cities.\n" +
+                        "Supported cities: atlanta, Boston, Chicago, Houston,\n" +
+                        "Los Angeles, New York, San Francisco, Washington.\n");
+
 
         //call getcitycode to obtain code for starting city
         //and destination city
@@ -39,11 +38,13 @@ public class Distance2DArray {
         int destination = getCityCode("Enter destination city: ");
 
         System.out.println(
-                "\nThe distance from "+ CITY_NAMES[start]+ " to " +
+                "\nThe distance from " + CITY_NAMES[start] + " to " +
                         CITY_NAMES[destination] + " is " +
                         DISTANCES[start][destination] + " miles.");
 
         //prompt user to enter city name
+
+    }
 
         private static int getCityCode(String prompt) {
             Scanner scan = new Scanner(System.in);
@@ -60,7 +61,7 @@ public class Distance2DArray {
             }
         }
 
-    }
+
 
 
 }
